@@ -5,7 +5,7 @@ const WIDTH = 960;
 const HEIGHT = 540;
 const MAP_WIDTH = 3000;
 const MAP_HEIGHT = MAP_WIDTH/2;
-const COLORS = ['#5ebaff','#00faf4','#ffffcc','#ffe775','#ffc140','#ff8f20','#ff6060','#FF0097','#FF00D4','#FB00FF','#D500FF','#AA00FF','#9B9B8B'];
+const COLORS = ['#5ebaff','#00faf4','#ffffcc','#ffe775','#ffc140','#ff8f20','#ff6060','#8b0000','#cc0033','#cc0066','#9b30ff','#f9a7b0','#ff99ff']
 
 var loadedMapImg,
     mapImg,
@@ -102,7 +102,7 @@ function draw(){
         fill(0);
         textAlign(CENTER,CENTER);
         textSize(12);
-        text('Hurricane Track',WIDTH/2,(HEIGHT-WIDTH/2)/2);
+        text('Hurricane Track Creator',WIDTH/2,(HEIGHT-WIDTH/2)/2);
     }
     else{
         textSize(48);
@@ -316,4 +316,4 @@ class TrackPoint{
         this.cat = cat || 0;
         this.type = type || 0;
     }
-}
+}]
