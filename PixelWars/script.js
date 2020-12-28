@@ -18,11 +18,6 @@ function Tile(team,power){
 teamColors = {};
 teams = [];
 
-Team("red","#F00");
-Team("blue","#00F");
-Team("green","#0F0");
-Team("yellow","#FF0");
-
 function render(){
 	draw.clear();
 	renderTileMap(
