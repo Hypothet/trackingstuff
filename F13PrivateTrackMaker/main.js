@@ -5,7 +5,7 @@ const WIDTH = 2880;
 const HEIGHT = 1620;
 const MAP_WIDTH = 3000;
 const MAP_HEIGHT = MAP_WIDTH/2;
-const COLORS = ['#5ebaff','#00faf4','#ffffcc','#ffe775','#ffc140','#ff8f20','#ff6060','#8b0000','#cc0033','#cc0066','#9b30ff','#f9a7b0','#ff99ff','#ffcccc','#00cc33','#99ccff'];
+const COLORS = ['#0094ff','#00ff21','#ffffcc','#e1ff00','#ea0000','#ff6e00','#db0066','#d800ff','#9d00ff','#5d00ff','#1d00ff','#0048ff','#00a5ff','#00e5ff','#00ffa5'];
 
 var loadedMapImg,
     mapImg,
@@ -38,19 +38,10 @@ function setup(){
     mapImg = createGraphics(MAP_WIDTH,MAP_HEIGHT);
     
     Promise.all([
-        loadImg('resources/map_NW.jpg'),
-        loadImg('resources/map_NE.jpg'),
-        loadImg('resources/map_SW.jpg'),
-        loadImg('resources/map_SE.jpg')
+        loadImg('ATLHD.png),
     ]).then(imgs=>{
-        let nw = imgs[0];
-        let ne = imgs[1];
-        let sw = imgs[2];
-        let se = imgs[3];
-        mapImg.image(nw,0,0,MAP_WIDTH/2,MAP_HEIGHT/2);
-        mapImg.image(ne,MAP_WIDTH/2,0,MAP_WIDTH/2,MAP_HEIGHT/2);
-        mapImg.image(sw,0,MAP_HEIGHT/2,MAP_WIDTH/2,MAP_HEIGHT/2);
-        mapImg.image(se,MAP_WIDTH/2,MAP_HEIGHT/2,MAP_WIDTH/2,MAP_HEIGHT/2);
+        let map = imgs[0];
+        mapImg.image(map,0,0,MAP_WIDTH/2,MAP_HEIGHT/2);
         loadedMapImg = true;
     });
 }
@@ -270,8 +261,6 @@ function keyTyped(){
         categoryToPlace = 13;
     else if(key === 'a')
         categoryToPlace = 14;
-    else if(key === 'z')
-        categoryToPlace = 15;
     else return;
     return false;
 }
