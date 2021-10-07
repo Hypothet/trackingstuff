@@ -98,13 +98,6 @@ var TrackMaker = (function(){
                     }
                 }
             }
-            fill(255);
-            noStroke();
-            rect(0,0,WIDTH,HEIGHT-WIDTH/2);
-            fill(0);
-            textAlign(CENTER,CENTER);
-            textSize(12);
-            text('TEST',WIDTH/2,(HEIGHT-WIDTH/2)/2);
         }
         else{
             textSize(48);
