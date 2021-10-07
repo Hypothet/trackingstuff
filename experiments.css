@@ -1,23 +1,21 @@
 body{
-	background: #BBB;
-	background: -o-linear-gradient(#BBB,#F3F3F3);
-	background: -webkit-linear-gradient(#BBB,#F3F3F3);
-	background: -moz-linear-gradient(#BBB,#F3F3F3);
-	background: linear-gradient(#BBB,#F3F3F3);
-	font-family: Calibri, Arial;
+	background: #1E1E1E;
+  color: white;
+	font-family: Montserrat, 'Open Sans', sans-serif;
 }
 
 a{
 	display: inline-block;
 	text-decoration: none;
-	color: blue;
+	color: #FF3838;
+  font-family: 'Open Sans', sans-serif;
 }
 
 #version{
 	position: fixed;
 	bottom: 0px;
 	right: 0px;
-	color: #777;
+	color: white;
 	padding: 10px;
 	z-index: 100;
 	user-select: none;
@@ -29,13 +27,13 @@ a{
 a:after{
 	display: block;
 	content: '';
-	border-bottom: solid 1px black;
+	border-bottom: solid 1px white;
 	transform: scaleX(0);
 	transition: transform 300ms;
 }
 
 a:hover, a#version:hover{
-	color: black;
+	color: white;
 	transform-origin: 50% 50%;
 }
 
