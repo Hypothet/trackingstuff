@@ -99,9 +99,7 @@ var TrackMaker = (function(){
                 }
             }
         }
-        else{
             textSize(48);
-            background-color: #1E1E1E;
             textAlign(CENTER,CENTER);
             text('Loading...', WIDTH/2,HEIGHT/2);
         }
