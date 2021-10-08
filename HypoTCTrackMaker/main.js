@@ -98,15 +98,18 @@ var TrackMaker = (function(){
                     }
                 }
             }
-            fill(255);
+            fill(30,30,30);
             noStroke();
             rect(0,0,WIDTH,HEIGHT-WIDTH/2);
             fill(0);
             textAlign(CENTER,CENTER);
+            textColor(255,255,255);
             textSize(12);
-            text('TEST',WIDTH/2,(HEIGHT-WIDTH/2)/2);
+            text('Hypo TC Track Maker',WIDTH/2,(HEIGHT-WIDTH/2)/2);
         }
         else{
+            textColor(255,255,255);
+            fill(30, 30, 30)
             textSize(48);
             textAlign(CENTER,CENTER);
             text('Loading...', WIDTH/2,HEIGHT/2);
