@@ -1,10 +1,10 @@
 var TrackMaker = (function(){
     const TITLE = 'Hypo TC Track Maker';
-    const VERSION = '20211007pa';
+    const VERSION = '20211008a';
 
     const WIDTH = 960;
     const HEIGHT = 540;
-     const COLORS = ['#5ebaff','#00faf4','#ffffcc','#ffe775','#ffc140','#ff8f20','#ff6060','#8b0000','#cc0033','#cc0066','#9b30ff','#f9a7b0','#ff99ff'];
+    const COLORS = ['#5ebaff','#00faf4','#ffffcc','#ffe775','#ffc140','#ff8f20','#ff6060','#8b0000','#cc0033','#cc0066','#9b30ff','#f9a7b0','#ff99ff']
 
     let loadedMapImg,
         mapImgs,
@@ -98,7 +98,15 @@ var TrackMaker = (function(){
                     }
                 }
             }
+            fill(255);
+            noStroke();
+            rect(0,0,WIDTH,HEIGHT-WIDTH/2);
+            fill(0);
+            textAlign(CENTER,CENTER);
+            textSize(12);
+            text('TEST',WIDTH/2,(HEIGHT-WIDTH/2)/2);
         }
+        else{
             textSize(48);
             textAlign(CENTER,CENTER);
             text('Loading...', WIDTH/2,HEIGHT/2);
@@ -275,7 +283,7 @@ var TrackMaker = (function(){
         }
     };
 
-       _p5.keyTyped = function(){
+          _p5.keyTyped = function(){
         if(key === 'd')
         categoryToPlace = 0;
     else if(key === 's')
